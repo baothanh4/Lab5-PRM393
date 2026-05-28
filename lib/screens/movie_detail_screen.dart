@@ -179,6 +179,65 @@ class _MovieDetailScreenState
 
                   const SizedBox(height: 24),
 
+                  // Cast & Crew title
+                  const Text(
+                    'Cast & Crew',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  const SizedBox(height: 12),
+
+                  // Cast list (horizontal)
+                  SizedBox(
+                    height: 150,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: movie.cast.length,
+                      itemBuilder: (context, index) {
+                        final actor = movie.cast[index];
+                        return Container(
+                          width: 100,
+                          margin: const EdgeInsets.only(right: 16),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundImage: NetworkImage(actor.imageUrl),
+                                onBackgroundImageError: (_, __) => const Icon(Icons.person),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                actor.name,
+                                textAlign: TextAlign.center,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                ),
+                              ),
+                              Text(
+                                actor.role,
+                                textAlign: TextAlign.center,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+                  const SizedBox(height: 24),
+
                   // Action buttons
                   Row(
                     mainAxisAlignment:

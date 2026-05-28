@@ -1,5 +1,6 @@
 import '../models/movie.dart';
 import '../models/trailer.dart';
+import '../models/cast.dart';
 
 final List<Movie> movies = [
   Movie(
@@ -23,6 +24,11 @@ final List<Movie> movies = [
           duration: '1m 10s',
       ),
     ],
+    cast: [
+      Cast(name: 'Minami Takayama', role: 'Conan Edogawa', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6vI2_394I166D_H_260-k095U784_f28-kQ&s'),
+      Cast(name: 'Wakana Yamazaki', role: 'Ran Mouri', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMhU6eR85_e5S-e6-U998-k075U784_f28-kQ&s'),
+      Cast(name: 'Rikiya Koyama', role: 'Kogoro Mouri', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkU6eR85_e5S-e6-U998-k075U784_f28-kQ&s'),
+    ],
   ),
 
   Movie(
@@ -40,6 +46,9 @@ final List<Movie> movies = [
         title: 'Main Trailer',
         duration: '2m 45s',
       ),
+    ],
+    cast: [
+      Cast(name: 'Narumi Asai', role: 'Doctor', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6vI2_394I166D_H_260-k095U784_f28-kQ&s'),
     ],
   ),
 
@@ -60,6 +69,9 @@ final List<Movie> movies = [
         title: 'Final Trailer',
         duration: '2m 20s',
       ),
+    ],
+    cast: [
+      Cast(name: 'Bruce Wayne', role: 'Batman', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6vI2_394I166D_H_260-k095U784_f28-kQ&s'),
     ],
   ),
 ];

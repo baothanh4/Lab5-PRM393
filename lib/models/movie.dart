@@ -1,4 +1,5 @@
 import 'trailer.dart';
+import 'cast.dart';
 
 class Movie{
   final int id;
@@ -8,6 +9,7 @@ class Movie{
   final List<String> genres;
   final double rating;
   final List<Trailer> trailers;
+  final List<Cast> cast;
 
   Movie({
     required this.id,
@@ -17,5 +19,6 @@ class Movie{
     required this.genres,
     required this.rating,
     required this.trailers,
+    required this.cast,
   });
 }
